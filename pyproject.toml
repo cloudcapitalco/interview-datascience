@@ -1,0 +1,12 @@
+[project]
+name = "commitment-risk-challenge"
+version = "0.1.0"
+description = "Candidate challenge: read cloud-usage data for the risk in a one-year commitment."
+requires-python = ">=3.11"
+dependencies = [
+    "duckdb>=1.1",
+    "pandas>=2.2",
+    "matplotlib>=3.9",
+    "jupyterlab>=4.2",
+    "ipykernel>=6.29",
+]

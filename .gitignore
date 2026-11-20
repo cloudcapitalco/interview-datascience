@@ -1,0 +1,9 @@
+# Python / uv environment
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Internal agent tooling, not part of the candidate-facing repo
+.agents/
+.claude/
