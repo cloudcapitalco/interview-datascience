@@ -28,7 +28,7 @@ uv sync
 uv run jupyter lab notebooks/starter.ipynb
 ```
 
-`uv sync` creates a `.venv` with DuckDB, pandas, matplotlib and JupyterLab;
+`uv sync` creates a `.venv` with DuckDB, pandas, pyarrow, matplotlib and JupyterLab;
 `uv run …` runs a command inside it.
 
 > **Setting up with an agent?** Paste the three commands above and ask it to get
@@ -36,11 +36,18 @@ uv run jupyter lab notebooks/starter.ipynb
 
 ## The data
 
-The data ships with this repository in `data/`. It is daily cloud usage for five
-anonymized accounts. Account names, dates and dollar amounts have been changed.
+The dataset is **not distributed with this repository**. It is provided
+separately. Place the files in the `data/` directory, where the starter notebook
+expects them:
 
-<!-- TODO(Brian): the prototype ships synthetic stand-ins. Replace with anonymized
-real data before any candidate sees it. -->
+- `data/daily_usage.parquet`: daily cloud cost by service for five accounts
+- `data/accounts.parquet`: one row per account, with the proposed commitment
+
+**Don't have the data?** Email **engineering@cloudcapital.co** to request a
+pre-signed download link (valid for one week).
+
+The accounts are real Cloud Capital customers, anonymized: names are replaced by
+letters, dates are shifted, and dollar amounts are rescaled.
 
 ## Where to go
 
@@ -48,7 +55,7 @@ real data before any candidate sees it. -->
 |---|---|
 | [docs/primer.md](docs/primer.md) | What a commitment is and who pays when usage falls. One page. |
 | [docs/challenge.md](docs/challenge.md) | The question, the limits, and what to send back. |
-| [docs/data_dictionary.md](docs/data_dictionary.md) | Every column in `data/`. |
+| [docs/data_dictionary.md](docs/data_dictionary.md) | Every column in the two data files. |
 | [docs/understanding_debt.md](docs/understanding_debt.md) | What we value. Read this before you start. |
 | [docs/understanding_ledger.md](docs/understanding_ledger.md) | The short ledger to submit with your work. |
 | [notebooks/starter.ipynb](notebooks/starter.ipynb) | Loads the data. Nothing else. |

@@ -17,8 +17,8 @@ The promise is paid in full whether it is used or not.
   from an hour with high usage. Unused commitment in one hour is gone.
 
 Only some services can be covered. In this dataset these are `compute`,
-`gpu_compute`, `database` and `cache`. Storage, network and other usage is always
-billed on demand.
+`database` and `cache`. Storage, network and other usage is always billed on
+demand.
 
 ## Who carries the gap
 
@@ -43,14 +43,15 @@ So Cloud Capital's exposure on an account has two parts:
 
 The commitment book is concentrated. A handful of large customers make up most of
 the committed dollars, so one large account going wrong costs more than many small
-ones. `data/accounts.csv` gives each account's share of the whole book if every
+ones. `accounts.parquet` gives each account's share of the whole book if every
 proposed commitment is approved.
 
 ## Words used in the data
 
 | Term | Meaning here |
 |---|---|
-| On-demand cost | What the usage costs at list price. All costs in `data/` are on-demand. |
-| Eligible usage | Usage a commitment can cover: compute, GPU compute, database, cache. |
+| On-demand cost | What the usage costs at list price. All costs in the data are at list price. |
+| Eligible usage | Usage a commitment can cover: compute, database, cache. |
+| Covered cost | The part of eligible usage that the customer's existing commitments already cover. |
 | Commitment level | Dollars per day of on-demand-equivalent eligible usage the commitment covers. A level of $10,000 per day costs $7,200 per day at the 28% discount. |
 | Unused commitment | Commitment level minus eligible usage, in the hours where usage is lower. |

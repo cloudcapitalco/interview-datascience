@@ -1,8 +1,9 @@
 # The challenge
 
-On 1 October 2025 Cloud Capital will make a one-year commitment against each of the
-five accounts in `data/`. The proposed levels are in `data/accounts.csv`. The usage
-history runs to 30 September 2025, the day before.
+Cloud Capital is about to make a one-year commitment against each of the five
+accounts in the data. Each account has its own decision date in `accounts.parquet`:
+its usage history ends that day and the proposed commitment starts the next. The
+proposed levels are in the same file.
 
 Read the [primer](./primer.md) first.
 
@@ -39,7 +40,7 @@ you this challenge.
 
 - **A memo of at most two pages** for the executive who decides on these
   commitments. Plain language, no code. Figures are welcome if they carry a point.
-- **Your notebook**, runnable from the data in `data/`.
+- **Your notebook**, runnable from the two data files in `data/`.
 - **An [understanding ledger](./understanding_ledger.md).** Read
   [what we value](./understanding_debt.md) first.
 
