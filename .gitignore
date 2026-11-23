@@ -1,0 +1,13 @@
+# Python / uv environment
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Internal agent tooling, not part of the candidate-facing repo
+.agents/
+.claude/
+
+# Challenge data, provided separately by signed link, not committed to this repo
+data/*.parquet
+data/*.csv
