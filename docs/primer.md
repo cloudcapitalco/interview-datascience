@@ -16,9 +16,11 @@ The promise is paid in full whether it is used or not.
 - **The commitment is measured hour by hour.** An hour with low usage cannot borrow
   from an hour with high usage. Unused commitment in one hour is gone.
 
-Only some services can be covered. In this dataset these are `compute`,
-`database` and `cache`. Storage, network and other usage is always billed on
-demand.
+Each kind of commitment covers a particular group of services. The commitment in
+this challenge is a Compute Savings Plan, which covers the `compute` service group
+only. Databases and caches have their own kinds of commitment; they are not part of
+this decision. Storage, network and most other services cannot be committed at
+all.
 
 ## Who carries the gap
 
@@ -36,7 +38,7 @@ candidates to work from, and how much of the contract terms to show. -->
 
 So Cloud Capital's exposure on an account has two parts:
 
-1. **Usage risk.** The customer's eligible usage falls below the commitment.
+1. **Usage risk.** The customer's compute usage falls below the commitment.
 2. **Counterparty risk.** The customer cannot or will not pay.
 
 ## A few accounts dominate the book
@@ -51,7 +53,7 @@ proposed commitment is approved.
 | Term | Meaning here |
 |---|---|
 | On-demand cost | What the usage costs at list price. All costs in the data are at list price. |
-| Eligible usage | Usage a commitment can cover: compute, database, cache. |
-| Covered cost | The part of eligible usage that the customer's existing commitments already cover. |
-| Commitment level | Dollars per day of on-demand-equivalent eligible usage the commitment covers. A level of $10,000 per day costs $7,200 per day at the 28% discount. |
-| Unused commitment | Commitment level minus eligible usage, in the hours where usage is lower. |
+| Compute usage | The usage this commitment can cover: the `compute` service group. |
+| Covered cost | The part of a service's cost that the customer's existing commitments already cover. |
+| Commitment level | Dollars per hour of compute usage, at list price, that the commitment covers. A level of $1,000 per hour costs $720 per hour at the 28% discount, every hour of the year. |
+| Unused commitment | Commitment level minus compute usage, in each hour where usage is lower. |

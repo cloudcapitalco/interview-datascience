@@ -1,7 +1,7 @@
 # Commitment Risk Challenge
 
 Cloud Capital is about to make a one-year promise to a cloud provider on behalf of
-each of five customer accounts. You get their daily cloud usage, a one-page primer
+each of five customer accounts. You get their hourly cloud usage, a one-page primer
 on how these promises work, and up to three hours. Tell us what could go wrong.
 
 Start with the [primer](docs/primer.md), then the [challenge](docs/challenge.md).
@@ -40,8 +40,8 @@ The dataset is **not distributed with this repository**. It is provided
 separately. Place the files in the `data/` directory, where the starter notebook
 expects them:
 
-- `data/daily_usage.parquet`: daily cloud cost by service for five accounts
-- `data/accounts.parquet`: one row per account, with the proposed commitment
+- `data/hourly_usage.parquet`: hourly cloud cost by service for five accounts
+- `data/accounts.parquet`: one row per account, with the proposed compute commitment
 
 **Don't have the data?** Email **engineering@cloudcapital.co** to request a
 pre-signed download link (valid for one week).

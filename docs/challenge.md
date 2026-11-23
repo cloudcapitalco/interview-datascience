@@ -2,8 +2,12 @@
 
 Cloud Capital is about to make a one-year commitment against each of the five
 accounts in the data. Each account has its own decision date in `accounts.parquet`:
-its usage history ends that day and the proposed commitment starts the next. The
-proposed levels are in the same file.
+its usage history ends that day and the proposed commitment starts the next.
+
+Each proposal is a one-year compute commitment, in dollars per hour, listed in the
+same file. Take the levels as given. The task is to judge the risk in them; you do
+not need to propose different ones. The data covers the accounts' other services
+too. Use them if they help you understand what is happening to compute.
 
 Read the [primer](./primer.md) first.
 
